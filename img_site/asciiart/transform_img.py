@@ -45,21 +45,4 @@ class transformImage():
                 
                 row.append(self.select_char(new_px))
             result.append(row)
-
-        for row in result:
-            for elmt in row:
-                sys.stdout.write(elmt)
-            time.sleep(.02) 
-            sys.stdout.write('\n')
-
-        result = Image.fromarray(y.astype(np.uint8))
-        result.save('out.png')
-
-if __name__ == '__main__':
-    tf = transformImage()
-    y = tf.pre_process_img('pikachu.png')
-    tf.greyscale_to_ascii(y)
-
-
-
-
+        return result

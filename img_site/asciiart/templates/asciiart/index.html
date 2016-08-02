@@ -2,19 +2,19 @@
 
 {% block content %}
 <div class="container">
-	<h1>Welcome to Ascii Art!</h1>
-	<form name="form" enctype = "multipart/form-data" action="{% url 'asciiart:process_image' %}" method="POST">
-	    {% csrf_token %}
+  <h1>Welcome to Ascii Art!</h1>
+  <form name="form" enctype="multipart/form-data" action="{% url 'asciiart:process_image' %}" method="POST">
+        {% csrf_token %}
         {{ form.image }}
-        <input type="file" />
+        <input type="file" name="file"/>
         <input type="submit" value="Upload" />
-    </form>
-     {% if uploaded %}
-         <strong>Your profile was saved.</strong>
-      {% endif %}
-      
-      {% if not uploaded %}
-         <strong>Your profile was not saved.</strong>
-      {% endif %}
-</div>	
+  </form>
+
+    <div id="editor">{{display}}</div>
+
+  <!--   <textarea class="form-control" rows="50">
+     
+    </textarea> -->
+
+</div>  
 {% endblock %}

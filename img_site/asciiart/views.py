@@ -3,19 +3,31 @@ from django.http import HttpResponse
 from django.core.urlresolvers import reverse
 from forms import UploadImageForm
 from django.http import HttpResponseRedirect
-#TODO: add image handler here
+from transform_img import *
+import sys
+
 
 def process_image(request):
-	uploaded = False
-	if request.method == 'POST':
-		form = UploadImageForm(request.POST, request.FILES)
-		if form.is_valid():
-			uploaded = True
-	else:
-		form = UploadImageForm() 
-	return render(request, 'asciiart/index.html')
-	# return reverse("asciiart:process_image")
+    if request.method == 'POST':
+        form = UploadImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            print "success"
+            img = form.cleaned_data['file']
+            tf = transformImage()
+            data = tf.pre_process_img(img)
+            result = tf.greyscale_to_ascii(data)  # result is the ascii representation array
+            display = ""
+            for row in result:
+                for char in row:
+                    display += char
+                display += "\n"
+        else:
+            print "failed"
+    else:
+        form = UploadImageForm() 
+    return render(request, 'asciiart/index.html', locals())
+    # return reverse("asciiart:process_image")
 
 def index(request):
-	return render(request, 'asciiart/index.html')
+    return render(request, 'asciiart/index.html')
 
