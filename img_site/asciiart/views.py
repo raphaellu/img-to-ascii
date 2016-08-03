@@ -17,6 +17,7 @@ def process_image(request):
             data = tf.pre_process_img(img)
             result = tf.greyscale_to_ascii(data)  # result is the ascii representation array
             display = ""
+            #convert the whole array into a string to avoid re-formatting
             for row in result:
                 for char in row:
                     display += char
@@ -26,7 +27,6 @@ def process_image(request):
     else:
         form = UploadImageForm() 
     return render(request, 'asciiart/index.html', locals())
-    # return reverse("asciiart:process_image")
 
 def index(request):
     return render(request, 'asciiart/index.html')
