@@ -10,6 +10,8 @@ import sys
 def process_image(request):
     if request.method == 'POST':
         form = UploadImageForm(request.POST, request.FILES)
+        print request.POST
+        print request.FILES
         if form.is_valid():
             print "success"
             img = form.cleaned_data['file']
@@ -26,7 +28,7 @@ def process_image(request):
             print "failed"
     else:
         form = UploadImageForm() 
-    return render(request, 'asciiart/index.html', locals())
+    return render(request, 'asciiart/success.html', locals())
 
 def index(request):
     return render(request, 'asciiart/index.html')

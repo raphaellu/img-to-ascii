@@ -1,23 +1,17 @@
 {% extends "asciiart/header.html" %}
 
 {% block content %}
-<div class="container">
-  <h1>Welcome to Ascii Art!</h1>
-  <form name="form" enctype="multipart/form-data" action="{% url 'asciiart:process_image' %}" method="POST">
+<div class="centered"> 
+  <h1 class="welcome">Welcome to Ascii Art !</h1>
+  <br>
+  <form id="fileForm" name="form" enctype="multipart/form-data" action="{% url 'asciiart:process_image' %}" method="POST" >
         {% csrf_token %}
         {{ form.image }}
-        <input type="file" name="file"/>
-        <input type="submit" value="Upload" />
+        <!-- Display filename inside the button instead of its label -->
+        <input type="file" data-filename-placement="inside" name="file">
+        <input type="submit" class="btn-default btn" value="Upload" disabled />
+
   </form>
-
-    <div id="editor">{{display}}</div>
-
 </div>  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.4/ace.js" type="text/javascript" charset="utf-8"></script>
-<script>
-    var editor = ace.edit("editor");
-    // editor.setTheme("ace/theme/monokai");
-    editor.getSession().setMode("ace/mode/javascript");
-</script>
-{% endblock %}
 
+{% endblock %}
