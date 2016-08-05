@@ -52,15 +52,7 @@ MIDDLEWARE_CLASSES = (
 )
 
 ROOT_URLCONF = 'img_site.urls'
-# TEMPLATE_DIRS = (
-#                     os.path.join(os.path.dirname(__file__),'templates'),
-# )
-# Temp_Path = os.path.realpath('.')
-# STATIC_ROOT = ''    
-# STATIC_URL = '/static/'
-# TEMPLATE_DIRS = (
-#     Temp_Path +"/template",
-# )
+
 
 TEMPLATES = [
     {
@@ -72,11 +64,12 @@ TEMPLATES = [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+                'django.contrib.messages.context_processors.messages',                  
             ],
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'img_site.wsgi.application'
 

@@ -1,14 +1,17 @@
 {% extends "asciiart/header.html" %}
 
 {% block content %}
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+  	<div class="navbar-header">
+		<a href="/asciiart" class="navbar-brand" style="font-family:'Lato'"><i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp&nbspRestart</a>
+  	</div>
+  </div>
+</nav>
 
-
-<div id="editor">{{display}}</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.4/ace.js" type="text/javascript" charset="utf-8"></script>
-<script>
-    var editor = ace.edit("editor");
-    // editor.setTheme("ace/theme/monokai");
-    editor.getSession().setMode("ace/mode/javascript");
-</script>
+<pre class="prettyprint"> 
+	{{ request.session.display }}
+</pre>
+<div id="taiji"></div>      
 {% endblock %}
 

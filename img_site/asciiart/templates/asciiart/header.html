@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Hi</title>
+	<title>Welcome to Ascii Art</title>
 	<meta charset="utf-8" />
 	{% load staticfiles %}
 	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css" />
-	<link rel="stylesheet" href="{% static 'css/app.css' %}" type="text/css" />
 	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{% static 'font-awesome-4.6.3/css/font-awesome.min.css' %}" type="text/css" />
+  <link rel="stylesheet" href="{% static 'css/app.css' %}" type="text/css" />
 </head>
 <body class="body">
 	<div>
@@ -17,19 +18,5 @@
 </body>
 <script src="{% static 'js/jquery-3.1.0.min.js' %}"></script>
 <script src="{% static 'js/bootstrap.file-input.js' %}"></script>
-<script>
-  // initialize the boostrap file picker
-  $('input[type=file]').bootstrapFileInput();
-  $('.file-inputs').bootstrapFileInput();
-
-  // enable the submit button only after file has been uploaded
-  $(document).ready(
-    function(){ $('input:file').change( function(){
-        if ($(this).val()) {
-            $('input:submit').attr('disabled',false);
-        } 
-      }
-    );
-  });
-</script>
+<script src="{% static 'js/app.js' %}"></script>
 </html>
