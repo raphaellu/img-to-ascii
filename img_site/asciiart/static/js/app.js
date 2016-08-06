@@ -23,6 +23,11 @@
       });
   })
 
+  $("#welcome").typed({
+        strings: ["Hello World","Welcome to Ascii Art !"],
+        typeSpeed: 0
+      });
+
   });
 
 // acquire the csrftoken 

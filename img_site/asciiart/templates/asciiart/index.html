@@ -2,8 +2,8 @@
 
 {% block content %}
 <div class="centered"> 
-  <h1 class="welcome">Welcome to Ascii Art !</h1>
-  <br>
+  <span id="welcome"></span>
+  <br><br>
   <form id="fileForm" name="form" enctype="multipart/form-data" action="{% url 'asciiart:process_image' %}" method="POST" >
         {% csrf_token %}
         {{ form.image }}

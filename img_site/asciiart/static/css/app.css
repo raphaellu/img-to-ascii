@@ -1,11 +1,12 @@
-
+/*general css*/
 #fileForm {
     text-align: center;
 }
 
 
-.welcome {
-	font-family: "Lato"
+#welcome {
+	font-family: "Lato";
+  font-size:45px;
 }
 
 .centered {
@@ -20,6 +21,7 @@
     top:40px;
 }
 
+/*taiji controller css*/
 .rotateTaiji {
     transform: rotate(180deg);
 }
@@ -64,4 +66,28 @@
   right: 0;
   border-color: white;
   background-color: black;
+}
+
+/*typewriter css*/
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+    font-size:50px;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
