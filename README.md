@@ -1,8 +1,9 @@
 # img-to-ascii
 Convert your favorite image into ascii art with one click!
-![usage](https://u.teknik.io/4XpZ9.gif)
 
-The above gif displays an example of how this website converts an image into the ascii representation. Currently two versions of ascii art are provided. 
+![](https://u.teknik.io/5rOlD.gif)
+
+The above gif displays an example of how this website converts an image into the ascii representation. Currently two versions of ascii art are provided. __choose an image with few details/colors.__
 
 ###[Website](http://asciiart.raphaellu.com/)
 supported by [Django 1.8](https://www.djangoproject.com/)
