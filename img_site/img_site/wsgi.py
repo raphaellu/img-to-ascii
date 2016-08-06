@@ -7,12 +7,12 @@ For more information on this file, see
 https://docs.djangoproject.com/en/1.8/howto/deployment/wsgi/
 """
 
-import os
-import sys
+import os, sys
 from django.core.wsgi import get_wsgi_application
 path = '/var/www/asciiart/img-to-ascii/img_site/'
 if path not in sys.path:
     sys.path.append(path)
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "img_site.settings")
-
 application = get_wsgi_application()
+
+
