@@ -120,7 +120,7 @@
 			var self = this;
 			// Insert cursor
 			if (this.showCursor === true) {
-				this.cursor = $("<span class=\"typed-cursor\">" + this.cursorChar + "</span>");
+				this.cursor = $("<span class=\"typed-cursor\">" + this.: + "</span>");
 				this.el.after(this.cursor);
 			}
 			if (this.stringsElement) {
