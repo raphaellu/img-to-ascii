@@ -22,3 +22,6 @@ supported by [Django 1.8](https://www.djangoproject.com/)
 ###Thanks to
 * [jzlikewei](https://github.com/jzlikewei)/[img2ascii](https://github.com/jzlikewei/img2ascii) : for the idea
 * [Paul Bourke - Character representation of grey scale images] (http://paulbourke.net/dataformats/asciiart/) : for characters' grayscale levels
+
+
+![](/geisel_ascii.png)
