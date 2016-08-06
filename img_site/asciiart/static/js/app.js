@@ -16,7 +16,7 @@
       e.preventDefault();
         $.ajax({
           type:"POST",
-          url:"/asciiart/toggle_color",
+          url:"/toggle_color",
           success: function(data){
             $(".prettyprint").html(data); // reverse ascii art's  color
           }
@@ -24,7 +24,7 @@
   })
 
   $("#welcome").typed({
-        strings: ["Hello World","Welcome to Ascii Art !"],
+        strings: ["Welcome to Ascii Art !","Simply upload an image :D"],
         typeSpeed: 0
       });
 
