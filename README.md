@@ -1,7 +1,7 @@
 # img-to-ascii
 Convert your favorite image into ascii art with one click!
 
-![](https://u.teknik.io/5rOlD.gif)
+![](/sample-usage.gif)
 
 The above gif displays an example of how this website converts an image into the ascii representation. Currently two versions of ascii art are provided. __choose an image with few details/colors.__
 
