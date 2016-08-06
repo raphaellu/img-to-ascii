@@ -8,11 +8,16 @@ The above gif displays an example of how this website converts an image into the
 ###[Website](http://asciiart.raphaellu.com/)
 supported by [Django 1.8](https://www.djangoproject.com/)
 
-
 ###Dependencies
 * Python 2.7
 * numpy
 * Pillow
+
+###To do
+* preset resolutions for different images
+* enable manual control of output size
+
+
 
 ###Thanks to
 * [jzlikewei](https://github.com/jzlikewei)/[img2ascii](https://github.com/jzlikewei/img2ascii)
