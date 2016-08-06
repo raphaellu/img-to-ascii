@@ -15,6 +15,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%);
 }
 
@@ -26,6 +27,9 @@
 /*taiji controller css*/
 .rotateTaiji {
     transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
 }
 
 
@@ -40,6 +44,9 @@
   border-radius: 50%;
   box-shadow: 2px 2px 16px #666666;
   transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
 }
 
 #taiji:hover {
@@ -75,9 +82,11 @@
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
+    -ms-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
     font-size:50px;
 }
+
 @keyframes blink{
     0% { opacity:1; }
     50% { opacity:0; }
