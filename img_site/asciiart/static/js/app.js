@@ -19,6 +19,7 @@
           url:"/toggle_color",
           success: function(data){
             $(".prettyprint").html(data); // reverse ascii art's  color
+            $(".prettyprint").toggleClass("reverseColor");
           }
       });
   })
